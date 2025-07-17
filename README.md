@@ -15,10 +15,12 @@ make
 You can edit the following variables to customize the toolchain build in the `config.mk` file:
 
 ```makefile
-export BINUTILS_VERSION = 2.38
-export GCC_VERSION = 11.2.0
-export TARGET = i686-elf
-export PREFIX = $(abspath build/$(TARGET))
+export BINUTILS_VERSION = 2.38 # or any other version you prefer
+export GCC_VERSION = 11.2.0 # or any other version you prefer
+export TARGET = i686-elf # or any other target you prefer
+export PREFIX = $(abspath build/$(TARGET)) # Installation prefix
+export BUILD_THREADS = 4 # or := $(shell nproc)
+export PATH := $(PREFIX)/bin:$(PATH) # Update PATH to include the toolchain binaries
 ```
 
 ## Components
