@@ -1,0 +1,9 @@
+build/**
+
+gcc-*
+binutils-*
+
+gcc/**/
+binutils/**/
+
+*.tar.xz
